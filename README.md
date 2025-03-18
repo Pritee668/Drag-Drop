@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+ Drag-and-Drop Website Builder - Architecture & Documentation
+This document provides an overview of the 🏗️ architecture, 🛠️ tools used, and 📌 rationale behind the development of the Drag-and-Drop Website Builder.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🖥️ Project Overview
+✅ Enhances traditional form-based website building with an intuitive drag-and-drop interface.
+✅ Users can drag elements (Text, Images, Buttons) onto a canvas.
+✅ Users can modify properties (color, font size, positioning, etc.) in real-time.
 
-## Available Scripts
+🏗️ Architecture
+1️⃣ Component-Based Structure
+📂 Project Structure (Ensures scalability & maintainability):
 
-In the project directory, you can run:
 
-### `npm start`
+/src
+ ├── /components
+ │   ├── Sidebar.js         # Contains draggable elements (Text, Image, Button)
+ │   ├── Canvas.js          # Handles dropped elements and rendering
+ │   ├── PropertyEditor.js  # Allows modifying element properties
+ ├── App.js                 # Main component (manages state and layout)
+ ├── App.css                # Styling for the application
+ ├── index.js               # Application entry point
+2️⃣ Functional Components
+✔ Sidebar.js → Provides draggable elements.
+✔ Canvas.js → Acts as a drop zone where users can place elements.
+✔ PropertyEditor.js → Allows real-time property modifications.
+✔ App.js → Manages the global state of all elements.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3️⃣ State Management (⚡ Real-Time Updates)
+✔ useState Hook stores & updates dragged elements dynamically.
+✔ Each element’s properties (position, text, color, etc.) are stored in a state array.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🛠️ Tools & Technologies Used
+Technology	Purpose
+⚛ React.js	Component-based UI framework
+🎨 HTML & CSS	Layout & styling
+🖱️ Drag & Drop API	Enables element dragging and dropping
+⚡ useState Hook	State management for dynamic updates
+📝 JavaScript	Core functionality
+📌 Rationale Behind Our Approach
+1️⃣ Enhanced User Experience
+✅ Replaced traditional forms with drag-and-drop system.
+✅ Users can visually position elements instead of filling multiple forms.
 
-### `npm test`
+2️⃣ Customization & Real-Time Updates
+✅ Every dropped element is instantly editable.
+✅ Users can change text, colors, font size, and positioning dynamically.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3️⃣ Scalability & Maintainability
+✅ Modular component-based architecture allows easy feature expansion.
+✅ Future enhancements (like more UI elements) can be done without modifying core logic.
 
-### `npm run build`
+4️⃣ Responsiveness (📱 Mobile-Friendly)
+✅ CSS media queries ensure adaptive layouts across devices.
+✅ Elements remain draggable & editable on both mobile & desktop.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5️⃣ Future Expansion Possibilities
+✅ More UI elements (Videos, Forms, Sliders).
+✅ Template system for reusable designs.
+✅ Export functionality to download created layouts.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🎯 Conclusion
+✅ This project enhances website creation by making it interactive & customizable.
+✅ Built with scalable architecture & modern frontend technologies.
+✅ The drag-and-drop system is expandable to support more complex web design features.
