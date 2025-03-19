@@ -1,0 +1,111 @@
+
+*{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.app-container {
+    /* display: flex;
+    flex-direction: row; 
+    height: 100vh; */
+    height: 90%;
+    width: 75vw;
+    overflow: hidden;
+}
+
+
+.sidebar {
+    width: 200px;
+    background: #f4f4f4;
+    padding: 15px;
+    border-right: 2px solid #ccc;
+}
+
+@media(max-width:600px){
+    .sidebar{
+        width: 90vw;
+    }
+    .app-container{
+        width: 90vw;
+    }
+}
+.sidebar h3 {
+    text-align: center;
+}
+
+.sidebar-item {
+    padding: 10px;
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    cursor: grab;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+.canvas {
+   width: 80%;
+   overflow: hidden;
+    position: relative;
+    border: 2px dashed #ccc;
+    min-width: 700px;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.draggable-element {
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 40%;
+    max-width: 400px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal label {
+    margin: 5px 0;
+}
+
+.modal input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.modal button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal button:first-child {
+    background: #4caf50;
+    color: white;
+}
+
+.modal button:last-child {
+    background: #f44336;
+    color: white;
+}
+
+
+
