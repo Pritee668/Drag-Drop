@@ -8,11 +8,6 @@ const Canvas = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newProperties, setNewProperties] = useState({});
 
-  // Handle Drag Start
-  const handleDragStart = (e, type) => {
-    e.dataTransfer.setData("elementType", type);
-  };
-
   // Handle Drop
   const handleDrop = (e) => {
     e.preventDefault();
